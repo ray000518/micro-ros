@@ -11,15 +11,14 @@ usbipd attach --wsl --busid <你的BUSID>
 
 Bash
 sudo chmod 666 /dev/ttyUSB0
+source /opt/ros/jazzy/setup.bash
+source ~/microros_ws/install/setup.bash
 ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
-按一下裸板上的 EN 鍵。 這次你一定會立刻看到 Session established。
+按一下裸板上的 EN 鍵。
 
 在視窗二輸入：ros2 topic echo /suction_status
 
-在視窗三發送指令：
-
-Bash
-ros2 topic pub --once /suction_command std_msgs/msg/Bool "{data: false}"
+在視窗三發送指令：ros2 topic pub --once /suction_command std_msgs/msg/Bool "{data: false}"
 
 
 ESP32

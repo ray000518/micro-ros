@@ -20,3 +20,26 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 
 Bash
 ros2 topic pub --once /suction_command std_msgs/msg/Bool "{data: false}"
+
+
+ESP32
+GPIO 4 ──> [繼電器 IN 1] (控制泵)
+GPIO 5 ──> [繼電器 IN 2] (控制閥)
+GND ─────> [繼電器 GND]
+
+
+[ 6V 電源 ]
+   │      │
+   │(+)   │(-) ─────────────────────────────────┐
+   │      │                                     │
+   │      └─(分接)─┐                            │
+   │               │                            │
+   ▼               ▼                            ▼
+[繼電器1 COM]   [繼電器2 COM]                 (負極接點)
+[繼電器1 NO ]   [繼電器2 NO ]                 (負極接點)
+   │               │                            │
+   │(正極供電)      │(正極供電)                   │
+   ▼               ▼                            │
+[真空泵]        [電磁閥]                         │
+   │               │                            │
+   └───────────────┴────────────────────────────┘ (迴路完成)

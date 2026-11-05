@@ -16,7 +16,7 @@ source ~/microros_ws/install/setup.bash
 ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 按一下裸板上的 EN 鍵。
 
-在視窗二輸入：ros2 topic echo /suction_status
+在視窗二輸入：ros2 topic echo /suction_status 監視回傳信號
 
 在視窗三發送指令：
 全部關閉：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 0}"

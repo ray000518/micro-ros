@@ -1,4 +1,8 @@
 # micro-ros
+如果編譯失敗可以把platformio.ini和main.cpp換成mirco_ros.txt裡的那套 或 去https://github.com/micro-ROS/micro_ros_arduino/releases下載jazzy的套件
+將下載的 .zip 解壓縮，把資料夾名稱改為 micro_ros_arduino。（路徑確認為：mircorostest/lib/micro_ros_arduino/src/esp32/libmicroros.a）
+將整個 micro_ros_arduino 資料夾放進你專案底下的 lib/ 目錄中
+
 打開 Windows 的 PowerShell (以系統管理員身分執行)。
 
 輸入 usbipd list 確認 ESP32 的 BUSID。

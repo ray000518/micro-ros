@@ -29,7 +29,7 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 
 模組 2 釋放：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 4}"
 
-==================================================================================
+==================================================================================\n
 如果編譯失敗可以把platformio.ini(替換platformio.ini要先把專案下的 .pio 資料夾刪除)和main.cpp換成mirco_ros.txt裡的那套 或 去https://github.com/micro-ROS/micro_ros_arduino/releases 下載jazzy的套件
 將下載的 .zip 解壓縮，把資料夾名稱改為 micro_ros_arduino,並將整個 micro_ros_arduino 資料夾放進你專案底下的 lib/ 目錄中（路徑確認為：mircorostest/lib/micro_ros_arduino/src/esp32/libmicroros.a）
 

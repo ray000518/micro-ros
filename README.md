@@ -29,6 +29,8 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 
 模組 2 釋放：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 4}"
 
+==================================================================================
+
 ESP32
 GPIO 4 ──> [繼電器 IN 1] (控制泵)
 GPIO 5 ──> [繼電器 IN 2] (控制閥)

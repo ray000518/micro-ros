@@ -18,8 +18,16 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 
 在視窗二輸入：ros2 topic echo /suction_status
 
-在視窗三發送指令：ros2 topic pub --once /suction_command std_msgs/msg/Bool "{data: false}"
+在視窗三發送指令：
+全部關閉：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 0}"
 
+模組 1 吸取：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 1}"
+
+模組 1 釋放：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 2}"
+
+模組 2 吸取：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 3}"
+
+模組 2 釋放：ros2 topic pub --once /suction_command std_msgs/msg/Int32 "{data: 4}"
 
 ESP32
 GPIO 4 ──> [繼電器 IN 1] (控制泵)

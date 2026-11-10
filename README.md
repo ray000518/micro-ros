@@ -35,8 +35,8 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 
 ==========================================================  
 ESP32
-GPIO 4、18 ──> [繼電器 IN 1] (控制泵)
-GPIO 5、19 ──> [繼電器 IN 2] (控制閥)
+GPIO 12、25 ──> [繼電器 IN 1] (控制泵)
+GPIO 13、26──> [繼電器 IN 2] (控制閥)
 GND ─────> [繼電器 GND]
 
 

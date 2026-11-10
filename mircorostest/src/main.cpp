@@ -8,12 +8,12 @@
 #include <std_msgs/msg/int32.h> // 更改為 Int32 標頭檔
 
 // --- 定義第一套模組硬體腳位 ---
-#define PUMP1_PIN 4  
-#define VALVE1_PIN 5 
+#define PUMP1_PIN 12  
+#define VALVE1_PIN 13 
 
 // --- 定義第二套模組硬體腳位 ---
-#define PUMP2_PIN 18 
-#define VALVE2_PIN 19
+#define PUMP2_PIN 25 
+#define VALVE2_PIN 26 
 
 // 宣告單一 ROS 2 實體即可
 rcl_subscription_t subscriber;
